@@ -1,5 +1,5 @@
 [package]
-name = "python-json-read-adapter"
+name = "json-forensics"
 version = "0.1.0"
 authors = ["Armin Ronacher <armin.ronacher@active-4.com>"]
 keywords = ["json", "python", "nan", "infinity", "serde_json"]

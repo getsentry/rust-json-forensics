@@ -1,7 +1,7 @@
-use std::io::{self, Read, Write};
+use std::io::{self, Read};
 use std::str;
 
-use python_json_read_adapter::translate_slice;
+use json_forensics::translate_slice;
 
 fn main() {
     let mut buffer = vec![];
