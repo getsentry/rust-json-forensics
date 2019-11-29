@@ -7,7 +7,7 @@
 //! clients like this, this wrapper can be used to still deserialize such a
 //! JSON document.
 //!
-//! This is just a way to get this to parse and `0.0` is the only value that can
+//! This is just a way to get this to parse and `0` is a value that can
 //! be inserted in a standardized way that fits without changing any of the
 //! positions.
 //!
@@ -22,7 +22,7 @@
 //! is thus converted to:
 //!
 //! ```ignore
-//! {"nan":0.0,"inf":0.0     ,"-inf":-0.0     }
+//! {"nan":0  ,"inf":0       ,"-inf":-0       }
 //! ```
 //!
 //! # serde support
