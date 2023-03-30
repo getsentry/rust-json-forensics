@@ -19,9 +19,9 @@ fn test_deserialize() {
     assert_eq!(
         rv,
         serde_json::Value::Array(vec![
-            serde_json::Value::Number(serde_json::Number::from_f64(0.0).unwrap()),
-            serde_json::Value::Number(serde_json::Number::from_f64(0.0).unwrap()),
-            serde_json::Value::Number(serde_json::Number::from_f64(0.0).unwrap()),
+            serde_json::Value::Number(serde_json::Number::from(0)),
+            serde_json::Value::Number(serde_json::Number::from_f64(-0.0).unwrap()),
+            serde_json::Value::Number(serde_json::Number::from(0)),
         ])
     );
 }
