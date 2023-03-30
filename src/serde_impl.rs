@@ -1,18 +1,4 @@
-use std::io;
-
-use serde_json;
-use serde_self::de;
-
-use crate::{translate_slice, JsonCompatRead};
-
-/// Deserialize an instance of type `T` from an IO stream of JSON.
-pub fn from_reader<R, T>(rdr: R) -> serde_json::Result<T>
-where
-    R: io::Read,
-    T: de::DeserializeOwned,
-{
-    serde_json::from_reader(JsonCompatRead::wrap(rdr))
-}
+use serde::de;
 
 /// Deserialize an instance of type `T` from bytes of JSON text.
 ///
@@ -22,7 +8,7 @@ pub fn from_slice<'a, T>(v: &'a mut [u8]) -> serde_json::Result<T>
 where
     T: de::Deserialize<'a>,
 {
-    translate_slice(v);
+    crate::translate_slice(v);
     serde_json::from_slice(v)
 }
 
