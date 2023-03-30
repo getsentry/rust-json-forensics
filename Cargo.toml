@@ -1,6 +1,6 @@
 [package]
 name = "json-forensics"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Sentry <oss@sentry.io>"]
 keywords = ["json", "python", "nan", "infinity", "serde_json"]
 description = "A crate that adds a read adapter to deal with bad Python caused JSON payloads (NaNs and Infinities)"
