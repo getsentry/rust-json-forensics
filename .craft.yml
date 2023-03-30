@@ -3,6 +3,8 @@ github:
   owner: getsentry
   repo: rust-json-forensics
 changelogPolicy: none
+artifactProvider:
+  name: none
 targets:
   - name: github
   - name: crates
