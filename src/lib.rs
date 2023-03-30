@@ -74,8 +74,8 @@ fn transition(bytes: &mut [u8], state: State, i: usize, c: u8) -> (State, u8) {
         (State::Infinity5, b't') => (State::Infinity6, b't'),
         (State::Infinity6, b'y') => {
             bytes[i - 7] = b'0';
-            for j in (i - 6)..i {
-                bytes[j] = b' ';
+            for b in &mut bytes[i - 6..i] {
+                *b = b' ';
             }
             (State::Initial, b' ')
         }
@@ -91,8 +91,8 @@ fn transition(bytes: &mut [u8], state: State, i: usize, c: u8) -> (State, u8) {
             if let Ok(num_str) = str::from_utf8(&bytes[start..i]) {
                 if num_str.parse::<u64>().is_err() && num_str.parse::<i64>().is_err() {
                     bytes[start] = b'0';
-                    for j in (start + 1)..i {
-                        bytes[j] = b' ';
+                    for b in &mut bytes[start + 1..i] {
+                        *b = b' ';
                     }
                 }
             }

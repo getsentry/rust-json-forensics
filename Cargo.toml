@@ -6,12 +6,13 @@ keywords = ["json", "python", "nan", "infinity", "serde_json"]
 description = "A crate that adds a read adapter to deal with bad Python caused JSON payloads (NaNs and Infinities)"
 license = "BSD-3-Clause"
 homepage = "https://github.com/getsentry/rust-json-forensics"
-edition = "2018"
+edition = "2021"
 readme = "README.md"
 
 [dependencies]
+serde = { version = "1.0.82", optional = true }
 serde_json = { version = "1.0.33", optional = true }
-serde_self = { version = "1.0.82", optional = true, package = "serde" }
 
 [features]
-serde = ["serde_self", "serde_json"]
+default = []
+serde = ["dep:serde", "dep:serde_json"]
