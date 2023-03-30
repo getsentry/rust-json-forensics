@@ -1,0 +1,8 @@
+minVersion: 0.34.1
+github:
+  owner: getsentry
+  repo: rust-json-forensics
+changelogPolicy: none
+targets:
+  - name: github
+  - name: crates
