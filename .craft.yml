@@ -1,8 +1,12 @@
-minVersion: 0.34.1
+minVersion: 3.9.0
 github:
   owner: getsentry
   repo: rust-json-forensics
-changelogPolicy: none
+changelog:
+  policy: none
+preReleaseCommand: bash scripts/bump-version.sh
+versioning:
+  policy: manual
 artifactProvider:
   name: none
 targets:
